@@ -1,0 +1,8 @@
+/.idea/
+/target/
+/Week_01/Week_01.iml
+/.settings
+*/.settings
+.classpath
+.project
+.DS_Store
