@@ -1,6 +1,8 @@
 /.idea/
 /target/
 /Week_01/Week_01.iml
+/Week_03/Week_03.iml
+/Week_03/HttpServer/HttpServer.iml
 /.settings
 */.settings
 .classpath
