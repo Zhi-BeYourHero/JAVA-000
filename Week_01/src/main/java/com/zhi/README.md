@@ -23,8 +23,8 @@ public class Hello {
 ```shell script
 E:\JAVA-000\Week_01\src\main\java\com\zhi\homework1>javap -c Hello.class
 Compiled from "Hello.java"
-public class com.zhi.homework1.Hello {
-  public com.zhi.homework1.Hello();
+public class Hello {
+  public Hello();
     Code:
        0: aload_0
        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
@@ -72,7 +72,7 @@ Classfile /E:/JAVA-000/Week_01/src/main/java/com/zhi/homework1/Hello.class
   Last modified 2020-10-18; size 282 bytes
   MD5 checksum 1b2cc4f0b204dddd9a50f2fc95501b73
   Compiled from "Hello.java"
-public class com.zhi.homework1.Hello
+public class Hello
   minor version: 0
   major version: 52
   flags: ACC_PUBLIC, ACC_SUPER
@@ -92,7 +92,7 @@ Constant pool:
   #13 = Utf8               com/zhi/homework1/Hello
   #14 = Utf8               java/lang/Object
 {
-  public com.zhi.homework1.Hello();
+  public Hello();
     descriptor: ()V
     flags: ACC_PUBLIC
     Code:
@@ -173,7 +173,7 @@ Classfile /E:/JAVA-000/Week_01/src/main/java/com/zhi/homework1/Hello.class
   # MD5校验和
   MD5 checksum 1b2cc4f0b204dddd9a50f2fc95501b73
   Compiled from "Hello.java"
-public class com.zhi.homework1.Hello
+public class Hello
   # 指明版本的Java语言规范
   minor version: 0
   major version: 52
@@ -204,7 +204,7 @@ Constant pool:
   #13 = Utf8               com/zhi/homework1/Hello
   #14 = Utf8               java/lang/Object
 {
-  public com.zhi.homework1.Hello();
+  public Hello();
     descriptor: ()V
     flags: ACC_PUBLIC
     Code:
@@ -298,34 +298,34 @@ SourceFile: "Hello.java"
 每个方法被执行的时候， Java虚拟机都会同步创建一个栈帧[1]（Stack Frame） 用于存储局部变量表、 操作数栈、 动态连接、 方法出口等信
 息。 每一个方法被调用直至执行完毕的过程， 就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程
 
-![](./images/ope1.jpg)
+![](images/ope1.jpg)
 首先， 执行偏移地址为0的指令， Bipush指令的作用是将单字节的整型常量值（-128～127） 推入
 操作数栈顶， 跟随有一个参数， 指明推送的常量值， 这里是100
 
-![](./images/ope2.jpg)
+![](images/ope2.jpg)
 执行偏移地址为2的指令， istore_1指令的作用是将操作数栈顶的整型值出栈并存放到第1个局部变
 量槽中。 后续4条指令（直到偏移为11的指令为止） 都是做一样的事情， 也就是在对应代码中把变量
 a、 b、 c赋值为100、 200、 300。 这4条指令的图示略过。
 
-![](./images/ope3.jpg)
+![](images/ope3.jpg)
 执行偏移地址为11的指令， iload_1指令的作用是将局部变量表第1个变量槽中的整型值复制到操作
 数栈顶。
 
-![](./images/ope4.jpg)
+![](images/ope4.jpg)
 执行偏移地址为12的指令， iload_2指令的执行过程与iload_1类似， 把第2个变量槽的整型值入栈。
 画出这个指令的图示主要是为了显示下一条iadd指令执行前的堆栈状况。
 
-![](./images/ope5.jpg)
+![](images/ope5.jpg)
 执行偏移地址为13的指令， iadd指令的作用是将操作数栈中头两个栈顶元素出栈， 做整型加法，
 然后把结果重新入栈。 在iadd指令执行完毕后， 栈中原有的100和200被出栈， 它们的和300被重新入
 栈。
 
-![](./images/ope6.jpg)
+![](images/ope6.jpg)
 执行偏移地址为14的指令， iload_3指令把存放在第3个局部变量槽中的300入栈到操作数栈中。 这
 时操作数栈为两个整数300。 下一条指令imul是将操作数栈中头两个栈顶元素出栈， 做整型乘法， 然后
 把结果重新入栈， 与iadd完全类似， 所以笔者省略图示。
 
-![](./images/ope7.jpg)
+![](images/ope7.jpg)
 执行偏移地址为16的指令， ireturn指令是方法返回指令之一， 它将结束方法执行并将操作数栈顶
 的整型值返回给该方法的调用者。 到此为止， 这段方法执行结束。
 

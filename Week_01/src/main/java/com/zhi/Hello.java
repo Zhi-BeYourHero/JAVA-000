@@ -1,4 +1,4 @@
-package com.zhi.homework1;
+package com.zhi;
 
 /**
  * @Description 写一个简单的 Hello.java，里面需要涉及基本类型，四则运行，if 和 for，
