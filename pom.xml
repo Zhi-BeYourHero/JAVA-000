@@ -12,6 +12,9 @@
         <module>Week_03/HttpServer</module>
         <module>Week_04</module>
         <module>Week_05</module>
+        <module>Week_07/insert</module>
+        <module>Week_07/dynamic_datasource_v1</module>
+        <module>Week_07/dynamic_datasource_v2</module>
     </modules>
 
     <build>

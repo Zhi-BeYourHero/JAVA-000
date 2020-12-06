@@ -33,7 +33,7 @@ public class HttpHandler extends ChannelInboundHandlerAdapter {
             FullHttpRequest fullRequest = (FullHttpRequest) msg;
             String uri = fullRequest.uri();
             //logger.info("接收到的请求url为{}", uri);
-            if (uri.contains("/test")) {
+            if (uri.contains("/com.zhi.test")) {
                 handlerTest(fullRequest, ctx);
             }
         } finally {

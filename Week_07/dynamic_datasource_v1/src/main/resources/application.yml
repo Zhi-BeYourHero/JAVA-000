@@ -1,0 +1,23 @@
+# 动态切换数据源-读写分离配置
+spring:
+  datasource:
+    hikari:
+      primary:
+        jdbc-url: jdbc:mysql://192.168.43.130:3306/mydb?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: 123456
+      secondary:
+        jdbc-url: jdbc:mysql://192.168.43.131:3306/mydb?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: 123456
+      thirdly:
+        jdbc-url: jdbc:mysql://192.168.43.132:3306/mydb?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: 123456
+logging:
+  level:
+    root: info
+    org.springframework.jdbc.core: debug

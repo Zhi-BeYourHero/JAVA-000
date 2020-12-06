@@ -3707,7 +3707,7 @@ import java.io.IOException;
 public class OkHttpDemo {
     public static void main(String[] args) throws IOException {
         OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder().url("http://localhost:8808/test").build();
+        Request request = new Request.Builder().url("http://localhost:8808/com.zhi.test").build();
         Response response = client.newCall(request).execute();
         System.out.println(response.body().string());
     }
